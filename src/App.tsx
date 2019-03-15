@@ -5,6 +5,9 @@ import CssTransition from './demos/CssTransition/CssTransition';
 import ChatHeads from './demos/chatHeads/ChatHeads';
 import TodoMvc from './demos/TodoMvc/TodoMvc';
 import TodoMvcCss from './demos/TodoMvcCss/TodoMvcCss';
+import Keyframes from './demos/keyframes';
+import Trails from './demos/trails';
+import Chain from './demos/chain';
 
 class App extends Component {
   render() {
@@ -12,10 +15,13 @@ class App extends Component {
       <div className="App">
         {/* <Toggle /> */}
         {/* <ChatHeads /> */}
-        <TodoMvcCss />
+        {/* <TodoMvcCss /> */}
         {/* <TodoMvc /> */}
         {/* <Transition /> */}
         {/* <CssTransition /> */}
+        {/* <Keyframes /> */}
+        {/* <Trails /> */}
+        <Chain />
       </div>
     );
   }
