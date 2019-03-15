@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Transition } from '../../transition';
+import { CSSTransition } from '../../transition';
 import './demo.css';
 
 interface State {
@@ -7,7 +7,7 @@ interface State {
   entered: boolean;
 }
 
-export default class TransitionDEMO extends Component<any, State> {
+export default class CSSTransitionDEMO extends Component<any, State> {
   state = {
     show: false,
     entered: false
@@ -28,20 +28,9 @@ export default class TransitionDEMO extends Component<any, State> {
           Toggle
         </div>
         <div style={{ marginTop: '1rem' }} className="well">
-          <Transition in={show} timeout={1000} unmountOnExit>
-            {state => {
-              switch (state) {
-                case 'entering':
-                  return 'Entering…';
-                case 'entered':
-                  return 'Entered!';
-                case 'exiting':
-                  return 'Exiting…';
-                case 'exited':
-                  return 'Exited!';
-              }
-            }}
-          </Transition>
+          <CSSTransition in={show} timeout={1000} classNames="demo">
+            <div>cssTransition</div>
+          </CSSTransition>
         </div>
       </div>
     );

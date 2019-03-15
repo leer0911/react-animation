@@ -144,7 +144,6 @@ export default class Transition extends Component<
       // nextStatus will always be ENTERING or EXITING.
       this.cancelNextCallback();
       const node = ReactDOM.findDOMNode(this) as HTMLElement;
-
       if (nextStatus === ENTERING) {
         this.performEnter(node, mounting);
       } else {

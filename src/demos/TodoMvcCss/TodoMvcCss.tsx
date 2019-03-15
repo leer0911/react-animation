@@ -65,7 +65,6 @@ export default class TodoMvcCss extends React.Component {
                 <CSSTransition
                   key={key}
                   timeout={500}
-                  in={true}
                   classNames="fade"
                 >
                   <li key={key} className={isDone ? 'completed' : ''}>
